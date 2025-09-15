@@ -1,0 +1,8 @@
+nautobot_project_dir: /opt/nautobot
+nautobot_version: "2.3"
+nautobot_site_name: "Geneve"
+nautobot_device_name: "srv-ansible-demo"
+nautobot_vlan_name: "Users-20"
+nautobot_vlan_vid: 20
+nautobot_ip_cidr: "192.168.2.50/24"
+nautobot_iface_name: "eth0"

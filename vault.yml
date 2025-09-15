@@ -1,0 +1,4 @@
+nautobot_superuser_username: "admin"
+nautobot_superuser_email: "admin@example.com"
+nautobot_superuser_password: "ChangeMe-STRONG!"
+nautobot_superuser_token: "0123456789abcdef0123456789abcdef01234567"
