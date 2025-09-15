@@ -1,0 +1,22 @@
+---
+- hosts: targets
+  become: true
+  collections:
+    - community.docker
+
+  pre_tasks:
+    - name: Charger variables chiffrées
+      include_vars:
+        file: "group_vars/all/vault.yml"
+
+  roles:
+    - role: docker_install
+    - role: nautobot_deploy
+      tags: ["nautobot"]
+      tasks_from: up.yml
+
+  tasks:
+    - name: Appels API pour créer Device + VLAN + IP
+      include_role:
+        name: nautobot_deploy
+        tasks_from: api.yml
